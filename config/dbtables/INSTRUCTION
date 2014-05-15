@@ -10,8 +10,10 @@ Table 1: users
 
 Table 2: projects
   id          ==> project id
-  mid         ==> manager id
   name        ==> project name
+  abbr        ==> abbreviation of project name as prefix of ticket name
+  cnt         ==> total ticket number of the project
+  mid         ==> manager id
   created_at  ==> time project created
   description ==> description of project
 
@@ -22,7 +24,9 @@ Table 3: messages
   sent_at      ==> time message sent
   genre        ==> genre of message (0: create, 1: join, 2: comment)
   project_name ==> project name the message about
-  desctiption  ==> description of message Table 4: tickets
+  desctiption  ==> description of message
+
+Table 4: tickets
   id          ==> ticket id
   pid         ==> project id the ticket belongs to
   genre       ==> genre of ticket (0: task, 1: bug, 2: improvement, 3: investigation)
