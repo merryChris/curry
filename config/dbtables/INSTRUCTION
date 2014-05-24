@@ -50,7 +50,7 @@ Table 6: versions
   id       ==> version id
   pid      ==> project id
   is_alive ==> whether this version is alive
-  sprite   ==> date duration (TBD)
+  sprint   ==> date duration (TBD)
 
 Table 7: relations_pu:
   id  ==> relation id
