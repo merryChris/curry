@@ -21,6 +21,7 @@
 
     /* Constant Html Elements */
     _loadingHtml: '<div class="loading-section"></div>',
+    _masterviewScrollerHtml: '<div class="view-scroller"></div>',
 
     /* Page Data Functions */
 

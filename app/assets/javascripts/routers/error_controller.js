@@ -14,7 +14,7 @@
     },
 
     error: function() {
-      return this.swap(new Curry.Views.Error({template: this._template.error, context: this.CONTEXT.ERRIR}));
+      return this.swap(new Curry.Views.Error({template: this._template.error, context: this.CONTEXT.ERROR}));
     },
 
     index: function(path) {

@@ -14,15 +14,7 @@
 
     _startAction: function(contextKey) {
       this._generatePageConfigs(contextKey);
-      this._generatePageModels(this.pageConfigs);
-      return this.swap(new Curry.Views.Home({template: this._template, context: contextKey, models: this.pageModels}));
-    },
-
-    _generatePageModels: function(configs) {
-      this.pageModels = {};
-      this.pageModels['player'] = new Curry.Models.GamePlayer({class_prefix: 'figure'});
-
-      return this.pageModels;
+      return this.swap(new Curry.Views.Home({template: this._template, context: contextKey}));
     },
 
     index: function() {

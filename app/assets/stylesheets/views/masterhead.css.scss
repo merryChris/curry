@@ -1,0 +1,99 @@
+// Place all the styles related to the Home View here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#masterview-container {
+  .slides-container {
+    .poster-section {
+      background-color: $poster-background;
+      height: $masterview-height;
+      position: relative;
+      .landscape, [class^='monster-'] {
+        position: absolute;
+        bottom: 0px;
+      }
+      .logo-image, .logo-text {
+        margin: auto;
+      }
+      .logo-text {
+        margin-top: 30px;
+      }
+      .logo-image {
+        @include logo-sprite('logo_image_128');
+      }
+      .logo-text {
+        @include logo-sprite('logo_character_tm_200');
+      }
+      .landscape {
+        @include masterview-sprite('landscape');
+      }
+      .monster-1 {
+        left: 300px;
+        @include masterview-sprite('monster-1');
+      }
+      .monster-2 {
+        left: 120px;
+        @include masterview-sprite('monster-2');
+      }
+      .monster-3 {
+        left: 900px;
+        @include masterview-sprite('monster-3');
+      }
+      .monster-4 {
+        left: 650px;
+        @include masterview-sprite('monster-4');
+      }
+    }
+    .game-section {
+      background-color: $game-background;
+      height: $masterview-height;
+      .map {
+        height: 260px;
+        padding: 100px 140px 140px;
+        .playground {
+          position: relative;
+          [id^='path-'] {
+            background-color: $path-background;
+            position: absolute;
+            display: none;
+          }
+          #player {
+            position: absolute;
+          }
+          .figure-up {
+            @include masterview-sprite('figure-up');
+          }
+          .figure-right {
+            @include masterview-sprite('figure-right');
+          }
+          .figure-down, .figure-default {
+            @include masterview-sprite('figure-down');
+          }
+          .figure-left {
+            @include masterview-sprite('figure-left');
+          }
+        }
+      }
+    }
+  }
+  .scroller-container {
+    margin: -30px 0 10px;
+    text-align: center;
+    .view-scroller {
+      position: relative;
+      display: inline-block;
+      border: 3px solid $white;
+      border-radius: 50%;
+      width: 14px;
+      height: 14px;
+      margin: 0 10px;
+      cursor: pointer;
+      &:hover {
+        background: rgba($white, $show-opacity);
+      }
+      &.active {
+        border-color: $green-l;
+      }
+    }
+  }
+}

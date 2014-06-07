@@ -19,6 +19,7 @@ $light-weight : 200;
 $white:   #FFFFFF;
 $blue-l:  #3377BB;
 $blue-d:  #3D4860;
+$green-l: #99CC33;
 $brown:   #522E23;
 $grey-fa: #FAFAFA;
 $grey-f2: #F2F2F2;
@@ -55,8 +56,8 @@ $header-background:  $brown;
 $content-background: $grey-f1;
 $popup-background:   $white;
 $input-background:   $grey-fa;
+$poster-background:  $blue-d;
 $game-background:    $grey-4;
-$master-background:  $blue-d;
 $error-background:   #F7F5DC;
 $path-background:    #FBCDC0;
 
@@ -71,6 +72,9 @@ $dropdown-light: #99CC33;
 /* page width */
 $page-max-width:    1200px;
 $page-border-width: 8px;
+
+/* view height */
+$masterview-height: 500px;
 
 /* page container padding */
 $page-container-vertical-padding:   20px;

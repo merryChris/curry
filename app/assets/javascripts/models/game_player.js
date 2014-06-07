@@ -43,6 +43,14 @@
     attributesMap: [
       { classPrefix: 'figure' },
       { className:   'figure-default' },
+      { initializeAttr: function() {
+          this.currentPosition = [0, 130];
+          this.currentDirection = -1;
+          this.currentCursor = 0;
+          this.farthestCursor = -1;
+          this.leftFrameNumber = 0;
+        }
+      },
       { checkPosition: function(dir) {
           // 0 means invalid direction
           //-1 means valid direction to step back
@@ -110,7 +118,7 @@
             this.currentDirection = -1;
             if (this.currentCursor == this.checkPoints.length - 1) {
               //TODO: zanwen, Should trigger events in a more centralized way with eventManger or else.
-              Curry.Events.COLLECTION.trigger(Curry.Events.Views.Home.GAMEOVER);
+              Curry.Events.COLLECTION.trigger(Curry.Events.Views.Masterview.GAMEOVER);
             }
           }
         }

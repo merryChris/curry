@@ -9,7 +9,7 @@ Curry.Events = {
       LOGGEDIN: 'LOGGED-IN',
       LOGGEDOUT: 'LOGGED-OUT'
     },
-    Home: {
+    Masterview: {
       GAMEOVER: 'GAME-OVER',
     },
     Dashboard: {

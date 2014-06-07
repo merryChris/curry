@@ -67,14 +67,21 @@
     },
 
     // Retrieve frame beforehand, like header & footer.
-    _retrieveFrame: function() {
+    _retrieveFrame: function(contextKey) {
       var headerRouter = new Curry.Routers.HeaderController();
-      var callback = headerRouter['index'];
-      callback.apply(headerRouter);
+      var headerCallback = headerRouter['index'];
+      headerCallback.apply(headerRouter);
 
       var footerRouter = new Curry.Routers.FooterController();
-      var callback = footerRouter['index'];
-      callback.apply(footerRouter);
+      var footerCallback = footerRouter['index'];
+      footerCallback.apply(footerRouter);
+
+      var masterviewType = Curry.Constants.MASTERVIEW[contextKey.toUpperCase()];
+      if (!Curry.Utils.isBlank(masterviewType)) {
+        var masterviewRouter = new Curry.Routers.MasterviewController();
+        var masterviewCallback = masterviewRouter[masterviewType];
+        masterviewCallback.apply(masterviewRouter);
+      }
     },
 
     // Swap to the new view.
@@ -85,14 +92,14 @@
         //TODO: zanwen, should do something here, like bind events etc.
       }
 
-      this._beforeSwap();
+      this._beforeSwap(view._context);
       this._tryToSwap();
       //TODO: zanwen, should move the _afterSwap logic to _tryToSwap, since it can be saved with error page.
       this._afterSwap();
     },
 
-    _beforeSwap: function() {
-      Curry.Events.COLLECTION.trigger(Curry.Events.Views.BEFORE_SWAP);
+    _beforeSwap: function(context) {
+      Curry.Events.COLLECTION.trigger(Curry.Events.Views.BEFORE_SWAP, context);
     },
 
     _tryToSwap: function() {},
