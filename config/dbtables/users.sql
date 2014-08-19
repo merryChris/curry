@@ -8,6 +8,6 @@ first_name varchar(255) NOT NULL,
 last_name varchar(255) NOT NULL,
 joined_at datetime NOT NULL,
 address text,
-INDEX fname_lname (first_name, last_name),
+UNIQUE KEY unique_name (first_name, last_name) USING BTREE,
 PRIMARY KEY (id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
