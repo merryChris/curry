@@ -29,7 +29,7 @@ class TicketController < ApplicationController
     sub_params = {}
     sub_params[:pid] = proj_hash[:pid]
     sub_params[:name] = proj_hash[:name]
-    sub_params[:title] = params[:project_title]
+    sub_params[:title] = params[:ticket_title]
     sub_params[:genre] = params[:genre].to_i
     sub_params[:priority] = params[:priority].to_i
     sub_params[:rid] = rid

@@ -21,9 +21,9 @@ en-us:
         -
         - "Please Enter Project Name"
         - "No Such Project"
-        project_title:
+        ticket_title:
         -
-        - "Please Enter Project Title"
+        - "Please Enter Ticket Title"
         genre:
         -
         - "Please Select Genre"
